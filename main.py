@@ -8,6 +8,7 @@ from sklearn.externals import joblib
 import numpy
 import matplotlib.pyplot as plt
 import os
+import pandas as pd
 
 # ----- load pima indians dataset --------------------------------------------------
 dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
@@ -15,6 +16,8 @@ dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
 # ----- split into input (X) and output (Y) variables ------------------------------
 X = dataset[:,0:8]
 Y = dataset[:,8]
+
+
 
 # ----- scale features -------------------------------------------------------------
 exists = os.path.isfile('scaler.pkl')
